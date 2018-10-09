@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "96035241600",
+    "firebase_url": "https://dairy-9b226.firebaseio.com",
+    "project_id": "dairy-9b226",
+    "storage_bucket": "dairy-9b226.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:96035241600:android:ffef429b093a4d5c",
+        "android_client_info": {
+          "package_name": "com.example.amam.dairy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "96035241600-29kj9kdhnkoh39g4gtcq9oiedn4toke3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.amam.dairy",
+            "certificate_hash": "361b05950a8331cdabaf40cd6db36a2a48894c68"
+          }
+        },
+        {
+          "client_id": "96035241600-d06el4hgtrmdag4ovlcik6gaqm5rfstj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD83BlVKCRvVNQ_o5InATJgjUql2sIP8vY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "96035241600-d06el4hgtrmdag4ovlcik6gaqm5rfstj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/marketM"
+        android:title="Market" />
+    <item android:id="@+id/veterinarianM"
+        android:title="Veterinarian" />
+
+    <item android:id="@+id/logoutM"
+        android:title="Logout" />
+
+</menu>

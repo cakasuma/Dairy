@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Register">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Register"
+            android:id="@+id/textvw1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="60dp"
+            android:textSize="25sp"
+            />
+
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/layoutdamn"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/textvw1"
+        android:layout_centerHorizontal="true"
+        >
+
+        <EditText
+            android:id="@+id/regname"
+
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:hint="Name"
+
+            android:inputType="text"/>
+    </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/layout1"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/layoutdamn"
+            android:layout_centerHorizontal="true"
+            >
+
+            <EditText
+                android:id="@+id/regemail"
+
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:hint="Email"
+
+                android:inputType="textEmailAddress"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/layout2"
+            android:layout_below="@id/layout1"
+            android:layout_centerHorizontal="true"
+            >
+
+            <EditText
+                android:id="@+id/regpass"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                android:inputType="textPassword"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/regbut"
+            android:layout_below="@id/layout2"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:text="Register"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/regbut"
+            android:id="@+id/tologin"
+            android:layout_centerHorizontal="true"
+            android:text="Already have an account? Login here"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            />
+
+
+</RelativeLayout>
