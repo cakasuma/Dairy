@@ -28,6 +28,7 @@ public class Register extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private FirebaseDatabase database;
     private EditText mRegName;
+    private EditText mRegPhone;
     private EditText mRegEmail;
     private DatabaseReference myRef;
     private EditText mRegPass;
@@ -44,6 +45,7 @@ public class Register extends AppCompatActivity {
         mRegName = (EditText)findViewById(R.id.regname);
         mRegEmail = (EditText)findViewById(R.id.regemail);
         mRegPass = (EditText)findViewById(R.id.regpass);
+        mRegPhone = (EditText)findViewById(R.id.regphone);
         mRegBut = (Button) findViewById(R.id.regbut);
         mToLogin = (TextView) findViewById(R.id.tologin);
 
@@ -145,6 +147,7 @@ public class Register extends AppCompatActivity {
         FirebaseUser currUser = mAuth.getCurrentUser();
         Map<String,String> datas = new HashMap<>();
         datas.put("name", mRegName.getText().toString());
+        datas.put("phone", mRegPhone.getText().toString());
         datas.put("email", mRegEmail.getText().toString());
         myRef.child(currUser.getUid()).setValue(datas);
     }

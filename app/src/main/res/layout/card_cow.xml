@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="8dp"
+    android:clickable="false"
+    app:cardElevation="6dp">
+
+    <LinearLayout
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="9"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                android:src="@drawable/cow" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cow_id"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_horizontal|start"
+                    android:textAllCaps="false"
+                    android:textStyle="bold"
+                    android:text="ID: #234234234"
+                    />
+            </LinearLayout>
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/cow_age"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="8dp"
+                android:gravity="center_horizontal|start"
+                android:textAllCaps="false"
+                android:text="Phone: 0143294879"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/cow_gender"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="8dp"
+                android:gravity="center_horizontal|start"
+                android:textAllCaps="false"
+                android:text="Gender"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/cow_description"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center_horizontal|start"
+                android:textAllCaps="false"
+                android:text=""
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:id="@+id/uploadDairyBut"
+                android:layout_below="@+id/layout2"
+                android:layout_centerHorizontal="true"
+                android:text="Click to delete"
+                android:textColor="@android:color/white"
+                android:background="@color/colorAccent"
+                />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

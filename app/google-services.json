@@ -1,35 +1,27 @@
 {
   "project_info": {
-    "project_number": "96035241600",
-    "firebase_url": "https://dairy-9b226.firebaseio.com",
-    "project_id": "dairy-9b226",
-    "storage_bucket": "dairy-9b226.appspot.com"
+    "project_number": "1066255936000",
+    "firebase_url": "https://dairycow-cfc0c.firebaseio.com",
+    "project_id": "dairycow-cfc0c",
+    "storage_bucket": "dairycow-cfc0c.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:96035241600:android:ffef429b093a4d5c",
+        "mobilesdk_app_id": "1:1066255936000:android:ffef429b093a4d5c",
         "android_client_info": {
           "package_name": "com.example.amam.dairy"
         }
       },
       "oauth_client": [
         {
-          "client_id": "96035241600-29kj9kdhnkoh39g4gtcq9oiedn4toke3.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.example.amam.dairy",
-            "certificate_hash": "361b05950a8331cdabaf40cd6db36a2a48894c68"
-          }
-        },
-        {
-          "client_id": "96035241600-d06el4hgtrmdag4ovlcik6gaqm5rfstj.apps.googleusercontent.com",
+          "client_id": "1066255936000-5frli3tlsr23vuo60h5uemnubs26g9rj.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyD83BlVKCRvVNQ_o5InATJgjUql2sIP8vY"
+          "current_key": "AIzaSyCKJx7BtON_rthXEuj4xhkW4kwSBknHGlY"
         }
       ],
       "services": {
@@ -37,13 +29,8 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 2,
-          "other_platform_oauth_client": [
-            {
-              "client_id": "96035241600-d06el4hgtrmdag4ovlcik6gaqm5rfstj.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
+          "status": 1,
+          "other_platform_oauth_client": []
         },
         "ads_service": {
           "status": 2

@@ -28,7 +28,7 @@ import java.util.Date;
 
 public class UploadDairy extends AppCompatActivity {
 
-    private EditText mPhoneUpload, mPriceUpload;
+    private EditText mPriceUpload;
     private TextView mQuantityProgress;
     private Button mUploadBut;
     private SeekBar mQuantitySlider;
@@ -52,7 +52,6 @@ public class UploadDairy extends AppCompatActivity {
         fireDat = FirebaseDatabase.getInstance();
         myRef = fireDat.getReference("markets");
         userRef = fireDat.getReference("users");
-        mPhoneUpload = (EditText) findViewById(R.id.phone_market);
         mPriceUpload = (EditText) findViewById(R.id.price_market);
         mQuantityProgress = (TextView)findViewById(R.id.quantity_progress);
         mUploadBut = (Button)findViewById(R.id.uploadDairyBut);
@@ -86,10 +85,10 @@ public class UploadDairy extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 final Date currentDate = Calendar.getInstance().getTime();
-                userRef.child(currUser.getUid()).child("name").addValueEventListener(new ValueEventListener() {
+                userRef.child(currUser.getUid()).addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        Market market = new Market(currentDate.toString(), Integer.toString(mQuantitySlider.getProgress()), mPhoneUpload.getText().toString(), (String) dataSnapshot.getValue(),currUser.getUid(), mPriceUpload.getText().toString());
+                        Market market = new Market(currentDate.toString(), Integer.toString(mQuantitySlider.getProgress()), (String) dataSnapshot.child("phone").getValue(), (String) dataSnapshot.child("name").getValue(), currUser.getUid(), mPriceUpload.getText().toString());
                         myRef.push().setValue(market);
                         Toast.makeText(UploadDairy.this, "Dairy has been uploaded to the market, lasts 120 days...", Toast.LENGTH_LONG).show();
                         Intent homeintent = new Intent(UploadDairy.this, HomeActivity.class);

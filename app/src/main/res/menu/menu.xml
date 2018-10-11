@@ -5,6 +5,13 @@
     <item android:id="@+id/veterinarianM"
         android:title="Veterinarian" />
 
+    <item android:id="@+id/addcowM"
+        android:title="Add Cow" />
+    <item android:id="@+id/cowM"
+        android:title="Cows" />
+    <item android:id="@+id/alarmM"
+        android:title="Set Alarm" />
+
     <item android:id="@+id/logoutM"
         android:title="Logout" />
 

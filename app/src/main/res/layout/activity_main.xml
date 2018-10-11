@@ -31,7 +31,7 @@
             android:layout_below="@+id/textvw1"
             android:id="@+id/textvw2"
 
-            android:background="@drawable/cow" />
+            android:background="@drawable/cow2" />
 
         <android.support.design.widget.TextInputLayout
             android:layout_width="250dp"

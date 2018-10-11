@@ -19,7 +19,34 @@
         <activity android:name=".Register" />
         <activity android:name=".HomeActivity" />
         <activity android:name=".Veterinarian" />
-        <activity android:name=".UploadDairy"></activity>
+        <activity android:name=".UploadDairy" />
+        <activity android:name=".AddCowActivity" />
+        <activity android:name=".CowActivity" />
+        <activity android:name=".CustomDailog" />
+
+        <receiver android:name=".AlarmReceiver" />
+
+        <service
+            android:name=".RingtonePlayingService"
+            android:enabled="true"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
+        <activity android:name=".AlarmMain" />
+        <activity android:name=".BookedVeteran" />
+        <activity android:name=".CustomDialogAppointment" />
+
+        <service android:name=".MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity android:name=".CustomDialogCow"></activity>
     </application>
 
 </manifest>

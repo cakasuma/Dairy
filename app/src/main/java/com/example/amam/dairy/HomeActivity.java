@@ -1,17 +1,15 @@
 package com.example.amam.dairy;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
@@ -65,7 +63,7 @@ public class HomeActivity extends AppCompatActivity {
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
 
-        Query queries = tables.orderByChild("farmerId").equalTo(mUser.getUid());
+        Query queries = tables.orderByChild("farmerId");
         queries.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -75,7 +73,8 @@ public class HomeActivity extends AppCompatActivity {
                 }
                 else{
 
-                    Toast.makeText(HomeActivity.this,"No Item in the market. Click + button to add table booking",Toast.LENGTH_LONG).show();
+                    Toast.makeText(HomeActivity.this,"No Item in the market. Click + button to add table booking",
+                            Toast.LENGTH_LONG).show();
                 }
             }
 
@@ -102,6 +101,20 @@ public class HomeActivity extends AppCompatActivity {
             }
         };
         recyclerView.setAdapter(adapter);
+        RecyclerView recyclerView = findViewById(R.id.marketrecycler);
+
+        recyclerView.addOnItemTouchListener(
+                new RecyclerItemClickListener(HomeActivity.this, recyclerView ,new RecyclerItemClickListener.OnItemClickListener() {
+                    @Override public void onItemClick(View view, int position) {
+                        CustomDailog cdd=new CustomDailog(HomeActivity.this, adapter.getRef(position).getKey().toString());
+                        cdd.show();
+                    }
+
+                    @Override public void onLongItemClick(View view, int position) {
+                        // do whatever
+                    }
+                })
+        );
     }
 
     @Override
@@ -128,6 +141,21 @@ public class HomeActivity extends AppCompatActivity {
                 FirebaseAuth.getInstance().signOut();
                 Intent signoutIntent = new Intent(HomeActivity.this, MainActivity.class);
                 startActivity(signoutIntent);
+
+                return true;
+            case R.id.addcowM:
+                Intent addcowIntent = new Intent(HomeActivity.this, AddCowActivity.class);
+                startActivity(addcowIntent);
+
+                return true;
+            case R.id.cowM:
+                Intent cowMarketIntent = new Intent(HomeActivity.this, CowActivity.class);
+                startActivity(cowMarketIntent);
+
+                return true;
+            case R.id.alarmM:
+                Intent alarmIntent = new Intent(HomeActivity.this, AlarmMain.class);
+                startActivity(alarmIntent);
 
                 return true;
             default:

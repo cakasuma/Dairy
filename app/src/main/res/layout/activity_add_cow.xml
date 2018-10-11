@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UploadDairy">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/txtv1tab"
+        android:layout_margin="16dp"
+        android:text="Add Cow"
+        android:textSize="26sp"
+        />
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout1"
+        android:focusableInTouchMode="true"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/txtv1tab"
+        android:layout_centerHorizontal="true"
+        >
+
+        <Spinner
+            android:id="@+id/spinner1"
+            android:layout_height="wrap_content"
+            android:layout_width="250dp"
+            android:focusableInTouchMode="true"
+            android:background="@android:drawable/btn_dropdown"
+            android:spinnerMode="dropdown">
+        </Spinner>
+    </android.support.design.widget.TextInputLayout>
+
+
+
+    <SeekBar
+        android:id="@+id/quantity_slider"
+        android:max="50"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:layout_below="@+id/layout1"
+        android:progress="1"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/quantity_progress"
+        android:layout_margin="20dp"
+        android:layout_below="@+id/quantity_slider"
+        android:layout_centerHorizontal="true"
+        android:text="Age: 0 Years"
+        android:textSize="22sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout2"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/quantity_progress"
+        android:layout_centerHorizontal="true"
+        >
+
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:id="@+id/description"
+            android:layout_height="150dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:gravity="top"
+            android:hint="Description"
+            android:fitsSystemWindows="true"
+            android:breakStrategy="balanced"
+            android:inputType="textMultiLine"
+            android:singleLine="false"
+            android:padding="5dp" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:id="@+id/uploadDairyBut"
+        android:layout_below="@+id/layout2"
+        android:layout_centerHorizontal="true"
+        android:text="Add Cow"
+        android:textColor="@android:color/white"
+        android:background="@color/colorAccent"
+        />
+
+
+</RelativeLayout>
+
+
